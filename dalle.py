@@ -2,6 +2,7 @@
 import requests
 import base64
 import streamlit as st
+import openai
 
 URL = "https://horrible-mole-67.loc.lt"
 headers = {'Bypass-Tunnel-Reminder': "go",
