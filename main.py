@@ -1,14 +1,14 @@
 # Importing required libraries
-import streamlit as st
-from dalle import create_and_show_images
+from dotenv import load_dotenv
+from langchain.agents.agent_toolkits import create_python_agent
 
-st.title("DALL-E Mini")
+load_dotenv()
 
-text = st.text_input("What should I Create ?")
 
-num_images = st.slider("How Many Images?", 1, 6)
+def main():
+    print("Start ...")
+    python_agent_executor = create_python_agent()
 
-ok = st.button("GO!!")
 
-if ok:
-    create_and_show_images(text, num_images)
+if __name__ == "__main__":
+    main()
